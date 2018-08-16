@@ -47,6 +47,9 @@ int main(){
 					visit[k][i][j] = 1;
 					q.push(make_pair(i, make_pair(j, k)));
 				}
+				if(arr[k][i][j] == -1){
+					visit[k][i][j] = -1;
+				}
 			}
 		}
 	}
@@ -56,7 +59,7 @@ int main(){
 	for(int k = 0; k < H; k++){
 		for(int i = 0; i < M; i++){
 			for(int j = 0; j < N; j++){
-				if(visit[k][i][j] == 0 ){
+				if(visit[k][i][j] == 0){
 					printf("-1\n");
 					return 0;
 				}
