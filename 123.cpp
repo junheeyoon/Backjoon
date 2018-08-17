@@ -13,7 +13,7 @@ int array_z[6] = {0, 0, 0, 0, -1, 1};
 int next_x, next_y, next_z;
 int max_value;
 
-void bfs(){
+void dfs(){
 
 	while(!q.empty()){
 		int x = q.front().first;
@@ -54,7 +54,7 @@ int main(){
 		}
 	}
 	
-	bfs();
+	dfs();
 	
 	for(int k = 0; k < H; k++){
 		for(int i = 0; i < M; i++){
